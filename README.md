@@ -10,3 +10,32 @@ In the following code I have created a new token where I used mint and burn func
 # How to run this
 To run the above code you can copy this code and go the remix ide and paste this code and deploy this smart contract in the remix ide.
 
+    pragma solidity ^0.8.0;
+    
+    contract MyToken {
+        string public name;
+        string public symbol;
+        uint256 public totalSupply;
+
+    mapping(address => uint256) public balances;
+
+    constructor(string memory _name, string memory _symbol, uint256 _totalSupply) {
+        name = _name;
+        symbol = _symbol;
+        totalSupply = _totalSupply;
+        balances[msg.sender] = _totalSupply;
+    }
+
+    function mint(address _to, uint256 _value) public {
+        totalSupply += _value;
+        balances[_to] += _value;
+    }
+
+    function burn(address _from, uint256 _value) public {
+        require(balances[_from] >= _value, "Insufficient balance");
+        totalSupply -= _value;
+        balances[_from] -= _value;
+    }
+    }
+
+  Then go to compile contract.sol and hit compile and after compiling check the deployment of the project and put some values in the mint and the burn values and tranjact some tokens.
