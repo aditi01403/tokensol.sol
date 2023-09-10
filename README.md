@@ -47,4 +47,6 @@ To run the above code you can copy this code and go the remix ide and paste this
   # Authors
   Aditi Singh
 
+  This has the MIT license.
+
 
