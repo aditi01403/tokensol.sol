@@ -43,3 +43,8 @@ To run the above code you can copy this code and go the remix ide and paste this
     }
 
   Then go to compile contract.sol and hit compile and after compiling check the deployment of the project and put some values in the mint and the burn values and tranjact some tokens.
+
+  # Authors
+  Aditi Singh
+
+
